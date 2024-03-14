@@ -5,6 +5,7 @@ from django.shortcuts import render
 def index(request):
     context = {
         'title': 'Yugoff - Programmer, ML Engineer',
+        
         'portfolio': [
             {
                 'image': 'static/site-yugoff-blog/image/logo-new.png',
