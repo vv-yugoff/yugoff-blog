@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from .models import PortfolioItem
+from .models import SkillsItem
 
 # Create your views here.
 
 def index(request):
-    portfolio = PortfolioItem.objects.all()
+    # portfolio = PortfolioItem.objects.all()
     context = {
         'title': 'Yugoff - Programmer, ML Engineer',
-        'portfolio': portfolio
+        'skills': SkillsItem.objects.all(),
+        'portfolio': PortfolioItem.objects.all()
     }
     return render(request, 'productsYugoffBlog/index.html', context)
 

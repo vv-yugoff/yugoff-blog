@@ -77,7 +77,7 @@
             <a class="menu-toggle" href="#"><span>Menu</span></a>
 
                 <div class="logo">
-                    <a href="index.html">Home</a>
+                    <a href="#">Home</a>
                 </div>
 
         <nav id="main-nav-wrap">
@@ -203,10 +203,16 @@
 
         </div>
 
-        <div class="col-six tab-full" id="skills">
+        <div class="col-six tab-full" id="skills" style="text-align: justify;">
 
             <h3>Skills</h3>
-            <p>1. Programming languages: Python, R.</br>
+
+            {% for item in skills %}
+
+              <p style="margin-bottom: 0px;">{{ item.skills }}</p>
+
+            {% endfor %}
+            <!-- <p>1. Programming languages: Python, R.</br>
               2. Machine learning libraries: TensorFlow, PyTorch, scikit-learn, Keras.</br>
               3. Data processing and analysis libraries: NumPy, Pandas, SciPy.</br>
               4. Data visualization tools: Matplotlib, Seaborn.</br>
@@ -214,7 +220,7 @@
               6. Machine learning algorithms: regression, classification, clustering, neural networks, ensemble models.</br>
               7. Databases: SQL, MongoDB, PostgreSQL.</br>
               8. Big data and cloud services: Apache Hadoop, Apache Spark, Amazon Web Services (AWS), Google Cloud Platform (GCP).</br>
-              <!-- 9. Operating systems: Linux, macOS.</br>
+              9. Operating systems: Linux, macOS.</br>
               10. Data preprocessing methods: scaling, normalization, handling missing values.</br>
               11. Model optimization and tuning: gradient descent, regularization, hyperparameter optimization.</br>
               12. Model deployment: Flask, Docker.</br>
@@ -418,7 +424,7 @@
 
         <div class="bgrid folio-item">
           <div class="item-wrap">
-            <img src='{{ item.image }}' alt='{{ item.alt }}'>
+            <img src='{{ item.image.url }}' alt='{{ item.alt }}'>
               <a href="{{ item.href }}" target="_blank" class="overlay">
               <div class="folio-item-table">
                 <div class="folio-item-cell">

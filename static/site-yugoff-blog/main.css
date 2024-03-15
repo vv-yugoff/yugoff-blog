@@ -1480,8 +1480,8 @@
  
  .intro-info {
      margin-top: 4.2rem;
-     margin-right: -30px;
-     margin-left: -30px;
+     margin-right: -75px;
+     margin-left: -75px;
  }
  .intro-info img {
      height: 10rem;
@@ -1491,7 +1491,7 @@
      float: left;
  }
  .intro-info .lead {
-     text-align: left;
+     text-align: justify;
      padding-left: 13rem;
  }
  
@@ -1543,7 +1543,7 @@
  .button-section [class*="col-"] .button:first-child {
      margin-right: 4rem;
  }
- 
+
  /**
   * responsive:
   * about
@@ -1590,7 +1590,7 @@
      }
      .intro-info .lead {
          padding-left: 0;
-         text-align: center;
+         text-align: justify;
      }
  }
  
@@ -1670,6 +1670,7 @@
  #resume .timeline-content {
      margin-left: 35%;
      padding-left: 60px;
+     text-align: justify;
  }
  #resume .timeline-content h4 {
      position: relative;
