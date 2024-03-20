@@ -1272,7 +1272,7 @@
   */
  #intro {
      background: #151515;
-     background-image: url(image/intro-bg.png);
+     background-image: url(images/intro-bg.png);
      background-position: center bottom;
      background-repeat: no-repeat;
      -webkit-background-size: cover;

@@ -9,7 +9,7 @@ def index(request):
     context = {
         'title': 'Yugoff - Programmer, ML Engineer',
         'skills': SkillsItem.objects.all(),
-        'portfolio': PortfolioItem.objects.all()
+        'portfolio': PortfolioItem.objects.all(),
     }
     return render(request, 'productsYugoffBlog/index.html', context)
 

@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import PortfolioItem
-from.models import SkillsItem
+from .models import PortfolioItem, SkillsItem
 
 # Register your models here.
 
