@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import PortfolioItem
 from .models import SkillsItem
-from .models import Data
 
 # Create your views here.
 
