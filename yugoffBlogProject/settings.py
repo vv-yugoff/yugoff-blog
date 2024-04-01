@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-#ykf3v9r%k^1=cr-6wnrna)5%&#heiomzr#0z-r%z3_6^z@+$9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    # ALLOWED_HOSTS = ['.example.com', '203.0.113.5']
+]
 
 
 # Application definition
@@ -77,8 +79,12 @@ WSGI_APPLICATION = 'yugoffBlogProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'productsYugoffBlog',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

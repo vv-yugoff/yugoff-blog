@@ -1,3 +1,10 @@
 django
 Pillow
 django_rest_framework
+requests
+python3-pip 
+python3-dev 
+libpq-dev 
+postgresql 
+postgresql-contrib
+psycopg2
