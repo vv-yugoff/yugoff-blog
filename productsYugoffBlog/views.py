@@ -7,7 +7,7 @@ from .models import SkillsItem
 def index(request):
     # portfolio = PortfolioItem.objects.all()
     context = {
-        'title': 'Yugoff - Programmer, ML Engineer',
+        'title': 'Yugoff - Programmer, CV Engineer',
         'skills': SkillsItem.objects.all(),
         'portfolio': PortfolioItem.objects.all(),
     }
