@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'productsYugoffBlog'
+    'productsYugoffBlog', 
+    'rest_framework',
+    'drf_yasg',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 ROOT_URLCONF = 'yugoffBlogProject.urls'
 
@@ -71,8 +80,17 @@ TEMPLATES = [
     },
 ]
 
+ASGI_APPLICATION = 'yugoffBlogProject.routing.application'
 WSGI_APPLICATION = 'yugoffBlogProject.wsgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

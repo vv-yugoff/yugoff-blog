@@ -1,12 +1,15 @@
 from django.db import models
 
-# Create your models here.
-
 class SkillsItem(models.Model):
     skills = models.CharField(max_length=200)
 
     def __str__(self):
         return f'Навыки: {self.skills}'
+
+    class Meta:
+        verbose_name = 'skill'
+        verbose_name_plural = 'skills'
+        ordering = ('skills',)
 
 class PortfolioItem(models.Model):
     title = models.CharField(max_length=200)
@@ -17,3 +20,8 @@ class PortfolioItem(models.Model):
 
     def __str__(self):
         return f'Портфолио: {self.title}'
+
+    class Meta:
+        verbose_name = 'portfolio'
+        verbose_name_plural = 'portfolios'
+        ordering = ('title',)

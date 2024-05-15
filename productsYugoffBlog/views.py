@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import PortfolioItem
 from .models import SkillsItem
-
-# Create your views here.
+from rest_framework import generics
+from .serializers import SkillsSerializer, PortfolioSerializer
 
 def index(request):
     # portfolio = PortfolioItem.objects.all()
@@ -12,6 +12,22 @@ def index(request):
         'portfolio': PortfolioItem.objects.all(),
     }
     return render(request, 'productsYugoffBlog/index.html', context)
+
+class SkillsListCreateView(generics.ListCreateAPIView):
+    queryset = SkillsItem.objects.all()
+    serializer_class = SkillsSerializer
+
+class SkillsRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SkillsItem.objects.all()
+    serializer_class = SkillsSerializer
+
+class PortfolioListCreateView(generics.ListCreateAPIView):
+    queryset = PortfolioItem.objects.all()
+    serializer_class = PortfolioSerializer
+
+class PortfolioRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PortfolioItem.objects.all()
+    serializer_class = PortfolioSerializer
 
 # def index(request):
 #     context = {

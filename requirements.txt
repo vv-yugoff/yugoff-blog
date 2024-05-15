@@ -3,3 +3,7 @@ Pillow
 django_rest_framework
 requests
 psycopg2
+djangorestframework
+drf-yasg
+channels
+channels_redis
